@@ -113,6 +113,15 @@ namespace ConnellBHS.Intranet.Web.Data.Migrations
 						.HasName("UserNameIndex")
 						.HasFilter("[NormalizedUserName] IS NOT NULL");
 
+
+					b.Property<string>("FirstName")
+										   .HasMaxLength(256);
+					b.Property<string>("LastName")
+										   .HasMaxLength(256);
+
+
+
+
 					b.ToTable("AspNetUsers");
 				});
 
